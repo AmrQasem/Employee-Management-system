@@ -1,0 +1,10 @@
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll.config
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EntityFramework.dll
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EntityFramework.xml
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojResolveAssemblyReference.cache
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
+c:\users\amr.qasem\documents\visual studio 2015\Projects\EmpolyeeService\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
