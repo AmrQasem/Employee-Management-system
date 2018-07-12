@@ -11,6 +11,32 @@ namespace EmpolyeeService.Controllers
     public class EmployeesController : ApiController
     {
         EmployeeDBEntities entities = new EmployeeDBEntities();
+
+        //[HttpGet]
+        /// <summary>
+        /// if i need send an parametar to the api and get data using specific filter
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns></returns>
+        //public HttpResponseMessage Get(string gender = "All")
+        //{
+        //    switch (gender.ToLower())
+        //    {
+        //        case "all":
+        //            return Request.CreateResponse(HttpStatusCode.OK, entities.Employees.ToList());
+        //        case "male":
+        //            return Request.CreateResponse(HttpStatusCode.OK, entities.Employees.Where(e => e.Gender.ToLower() == "male").ToList());
+        //        case "female":
+        //            return Request.CreateResponse(HttpStatusCode.OK, entities.Employees.Where(e => e.Gender.ToLower() == "female").ToList());
+        //        default:
+        //            return Request.CreateResponse(HttpStatusCode.BadRequest, "in valid gender");
+        //    }
+        //}
+
+
+
+        //[HttpGet]
+
         public IEnumerable<Employee> Get()
         {
             return entities.Employees.ToList();

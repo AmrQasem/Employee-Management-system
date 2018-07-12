@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <input id="btn" type="button" value="Get All Employees" />
+    <!--Employee ID :<input id="txt" type="text"/>
+    <input id="btnIDEmp" type="button" value="Get Specific Employee" />-->
+    <input id="btnRemove" type="button" value="Remove" />
+    <ul id="ulEmployees"></ul>
+</body>
+</html>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            var ULemployees = $('#ulEmployees');
+            var txtEmp = $('txt');
+            $('#btn').click(function () {
+                debugger
+                $.ajax({
+                    type: 'GET',
+                    url: 'api/Employees',
+                    dataType: 'json',
+                    success: function (data) {
+                        ULemployees.empty();
+                        $.each(data, function (index, val) {
+                            var fullName = val.FirstName + ' ' + val.LastName;
+                            ULemployees.append('<li>'+ fullName + '</li>')
+                        });
+                    }
+                });
+            });
+            //$('#btnIDEmp').click(function () {
+            //    debugger
+            //    $.ajax({
+            //        type: 'GET',
+            //        url: 'api/Employees?Id='+ txtEmp,
+            //        dataType: 'json',
+            //        success: function (data) {
+            //            //alert("asda");
+            //            //ULemployees.empty();
+            //            //$.each(data, function (index, val) {
+            //            //    var fullName = val.FirstName + ' ' + val.LastName;
+            //            //    ULemployees.append('<li>'+ fullName + '</li>')
+            //            //});
+            //        }
+            //    });
+            //});
+            $('#btnRemove').click(function () {
+                ULemployees.empty();
+            });
+        });
+</script>
