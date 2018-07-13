@@ -37,12 +37,15 @@ namespace EmpolyeeService.Controllers
 
         //[HttpGet]
 
-        public IEnumerable<Employee> Get()
+        [HttpGet]
+        public IEnumerable<Employee> GetEmployee()
         {
-            return entities.Employees.ToList();
+            var empdata = entities.Employees.ToList();
+            return empdata;
         }
 
-        public HttpResponseMessage Get(int Id)
+        [HttpGet]
+        public HttpResponseMessage GetEmployeeByID(int Id)
         {
             var empData = entities.Employees.FirstOrDefault(e => e.ID == Id);
             if (empData != null)
@@ -55,7 +58,8 @@ namespace EmpolyeeService.Controllers
             }
         }
 
-        public HttpResponseMessage Post([FromBody]Employee emp)
+        [HttpPost]
+        public HttpResponseMessage AddEmployee([FromBody]Employee emp)
         {
             try
             {
@@ -72,7 +76,8 @@ namespace EmpolyeeService.Controllers
             }
         }
 
-        public HttpResponseMessage Delete(int ID)
+        [HttpDelete]
+        public HttpResponseMessage DeleteEmployee(int ID)
         {
             try
             {
@@ -96,7 +101,8 @@ namespace EmpolyeeService.Controllers
             }
         }
 
-        public HttpResponseMessage Put(int id, [FromBody] Employee emp)
+        [HttpPut]
+        public HttpResponseMessage EditEmployee(int id, [FromBody] Employee emp)
         {
             try
             {
