@@ -56,5 +56,11 @@ namespace EmployeeWeb.Controllers
             var editedEmployee = client.PutAsJsonAsync<EmployeeVM>("employees/"+emp.ID, emp).Result;
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int ID)
+        {
+            var EmployeeDetails = client.DeleteAsync("employees/" + ID.ToString()).Result;
+            return RedirectToAction("Index");
+        }
     }
 }
